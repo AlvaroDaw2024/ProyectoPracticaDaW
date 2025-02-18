@@ -1,7 +1,7 @@
-*{
-    margin: 0;
-    box-sizing: border-box;
-    padding: 0;
+*, *:before, *:after {
+	-webkit-border-sizing: border-box;
+	-moz-border-sizing: border-box;
+	border-sizing: border-box;
 }
 
 body{
