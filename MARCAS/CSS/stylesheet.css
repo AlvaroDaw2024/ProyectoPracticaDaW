@@ -11,3 +11,19 @@ body{
 
     
 }
+
+/* From Uiverse.io by cohencoo */ 
+section.busqueda.input {
+    border-radius: 10px;
+    outline: 2px solid #4CEB70;
+    border: 0;
+    background-color: #e2e2e;
+    outline-offset: 3px;
+    padding: 10px 1rem;
+    transition: 0.25s;
+  }
+  
+  section.busqueda.input:focus {
+    outline-offset: 5px;
+    background-color: #fff
+  }
