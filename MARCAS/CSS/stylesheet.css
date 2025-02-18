@@ -34,7 +34,9 @@ section.busqueda.input {
     outline-offset: 5px;
     background-color: #fff
   }
+
 /*Login*/
+
 .flexbox-login{
     display: flex;
     flex-direction: column;
