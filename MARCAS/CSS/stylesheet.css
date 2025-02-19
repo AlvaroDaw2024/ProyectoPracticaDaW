@@ -13,16 +13,54 @@
 
 body{
     width: 100%;
+    min-height: 100%;
     height: 1000px;
     max-height: fit-content;
-    margin: 
+    margin: 0;
+    background: url(../IMG/tree.png) center/cover no-repeat;
+    position: relative;
+  
 }
+.fondo{
+  min-width: 100%;
+  min-height: 100%;
+  width: 100%;
+  height: 100%;
+  border: 1px solid black;
+}
+section{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.fondo::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  height: 100%;
+  max-height: max-content;
+  background: black;
+  z-index: -1;
+  opacity: 50%;
+}
+
 
 header{
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-around;
     width: 99%;
+    margin: auto;
 
 }
 
@@ -73,12 +111,13 @@ section.busqueda.input {
   .card-side::before {
     position: absolute;
     content: 'Inicia sesión';
-    left: -100px;
+    left: -115px;
     top: 0;
-    width: 100px;
+    width: 110px;
     text-decoration: underline;
-    color: var(--font-color);
+    color: #fff;
     font-weight: 600;
+    font-size: larger;
   }
   
   .card-side::after {
@@ -88,8 +127,9 @@ section.busqueda.input {
     top: 0;
     width: 100px;
     text-decoration: none;
-    color: var(--font-color);
+    color: #fff;
     font-weight: 600;
+    font-size: larger;
   }
   
   .toggle {
