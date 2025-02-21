@@ -1,32 +1,41 @@
+import java.time.LocalDate
+
 open class Evento {
     var Categoria:ArrayList<Categoria> = ArrayList<Categoria>()
     var inscritos=ArrayList<Usuario>()
     var asistentes=ArrayList<Usuario>()
     var IdEvento:Int=0
     var nombre:String=""
-    var fecha:String=""
+    var fecha:LocalDate? = null
     var ubicacion:String=""
     var tipo=""
 
+    companion object{
+        private var contadorIds=1
+        fun devolverId():Int{
+            return contadorIds++
+        }
+    }
+
     constructor(){}
     constructor(
-        tipo: String,
-        ubicacion: String,
-        fecha: String,
-        nombre: String,
-        IdEvento: Int,
-        asistentes: ArrayList<Usuario>,
+        Categoria: ArrayList<Categoria>,
         inscritos: ArrayList<Usuario>,
-        Categoria: ArrayList<Categoria>
+        asistentes: ArrayList<Usuario>,
+        IdEvento: Int,
+        nombre: String,
+        fecha: LocalDate?,
+        ubicacion: String,
+        tipo: String
     ) {
-        this.tipo = tipo
-        this.ubicacion = ubicacion
-        this.fecha = fecha
-        this.nombre = nombre
-        this.IdEvento = IdEvento
-        this.asistentes = asistentes
-        this.inscritos = inscritos
         this.Categoria = Categoria
+        this.inscritos = inscritos
+        this.asistentes = asistentes
+        this.IdEvento = IdEvento
+        this.nombre = nombre
+        this.fecha = fecha
+        this.ubicacion = ubicacion
+        this.tipo = tipo
     }
 
 

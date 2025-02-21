@@ -1,3 +1,4 @@
+import java.time.LocalDate
 import kotlin.random.*
 
 class Factoria {
@@ -6,7 +7,7 @@ class Factoria {
         var ID_Evento = 1
         private var ID_Organizador = 1
 
-      private fun crearUsuario(): Usuario {
+        private fun crearUsuario(): Usuario {
             val nombre: String = Nombres.nombreAleatorio()
             val email = Emails.emailAleatorio()
             val password = passwordAleatoria()
@@ -16,17 +17,17 @@ class Factoria {
             return Usuario(nombre, email, password, ID_Usuario, eventosAsistidos)
         }
 
-       private fun crearOrganizador(): Organizador {
-            val nombre = ""
+        private fun crearOrganizador(): Organizador {
+            val nombre = Empresas.empresaAleatoria()
             val email = Emails.emailAleatorio()
             val telefono = tlfAleatorio()
             val ID_Organizador = ID_Organizador++
             val eventosOrganizados = ArrayList<Evento>()
 
-            return Organizador(nombre,email,telefono,ID_Organizador,eventosOrganizados)
+            return Organizador(nombre, email, telefono, ID_Organizador, eventosOrganizados)
         }
 
-       private fun passwordAleatoria(): String {
+        private fun passwordAleatoria(): String {
             var password = ""
             repeat(CONSTANTES.passwordDigitos.random()) {
                 password = password + CONSTANTES.ASCII.random().toChar()
@@ -34,7 +35,7 @@ class Factoria {
             return password
         }
 
-      private  fun tlfAleatorio(): Int {
+        private fun tlfAleatorio(): Int {
             var telefono = ""
             telefono = telefono + CONSTANTES.NUMEROTLFESPANIOL.random()
             repeat(CONSTANTES.TAMANIOTELEFONO) {
@@ -42,6 +43,15 @@ class Factoria {
             }
             return telefono.toInt()
         }
+
+        fun generarFechaFuturaAleatoria( //sacada del gpt
+            inicio: LocalDate = LocalDate.now().plusDays(1),
+            fin: LocalDate = LocalDate.now().plusYears(5)
+        ): LocalDate {
+            val diasEntre = inicio.toEpochDay()..fin.toEpochDay()
+            return LocalDate.ofEpochDay(diasEntre.random())
+        }
+
 
     }
 }

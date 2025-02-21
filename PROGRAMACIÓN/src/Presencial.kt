@@ -1,3 +1,5 @@
+import java.time.LocalDate
+
 class Presencial:Evento {
     var direccion=""
 
@@ -6,16 +8,16 @@ class Presencial:Evento {
     }
 
     constructor(
-        tipo: String,
-        ubicacion: String,
-        fecha: String,
-        nombre: String,
-        IdEvento: Int,
-        asistentes: ArrayList<Usuario>,
-        inscritos: ArrayList<Usuario>,
         Categoria: ArrayList<Categoria>,
+        inscritos: ArrayList<Usuario>,
+        asistentes: ArrayList<Usuario>,
+        IdEvento: Int,
+        nombre: String,
+        fecha: LocalDate?,
+        ubicacion: String,
+        tipo: String,
         direccion: String
-    ) : super(tipo, ubicacion, fecha, nombre, IdEvento, asistentes, inscritos, Categoria) {
+    ) : super(Categoria, inscritos, asistentes, IdEvento, nombre, fecha, ubicacion, tipo) {
         this.direccion = direccion
     }
 }
