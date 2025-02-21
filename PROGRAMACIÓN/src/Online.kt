@@ -6,15 +6,16 @@ class Online:Evento {
     }
 
     constructor(
-        Categoria: ArrayList<Categoria>,
-        inscritos: ArrayList<Usuario>,
-        asistentes: ArrayList<Usuario>,
-        IdEvento: Int,
-        nombre: String,
-        fecha: String,
+        tipo: String,
         ubicacion: String,
+        fecha: String,
+        nombre: String,
+        IdEvento: Int,
+        asistentes: ArrayList<Usuario>,
+        inscritos: ArrayList<Usuario>,
+        Categoria: ArrayList<Categoria>,
         paginaweb: String
-    ) : super(Categoria, inscritos, asistentes, IdEvento, nombre, fecha, ubicacion) {
+    ) : super(tipo, ubicacion, fecha, nombre, IdEvento, asistentes, inscritos, Categoria) {
         this.paginaweb = paginaweb
     }
 }

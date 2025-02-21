@@ -6,23 +6,28 @@ open class Evento {
     var nombre:String=""
     var fecha:String=""
     var ubicacion:String=""
+    var tipo=""
 
     constructor(){}
     constructor(
-        Categoria: ArrayList<Categoria>,
-        inscritos: ArrayList<Usuario>,
-        asistentes: ArrayList<Usuario>,
-        IdEvento: Int,
-        nombre: String,
+        tipo: String,
+        ubicacion: String,
         fecha: String,
-        ubicacion: String
+        nombre: String,
+        IdEvento: Int,
+        asistentes: ArrayList<Usuario>,
+        inscritos: ArrayList<Usuario>,
+        Categoria: ArrayList<Categoria>
     ) {
-        this.Categoria = Categoria
-        this.inscritos = inscritos
-        this.asistentes = asistentes
-        this.IdEvento = IdEvento
-        this.nombre = nombre
-        this.fecha = fecha
+        this.tipo = tipo
         this.ubicacion = ubicacion
+        this.fecha = fecha
+        this.nombre = nombre
+        this.IdEvento = IdEvento
+        this.asistentes = asistentes
+        this.inscritos = inscritos
+        this.Categoria = Categoria
     }
+
+
 }
