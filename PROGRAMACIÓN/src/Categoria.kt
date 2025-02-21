@@ -3,7 +3,7 @@ enum class Categoria {
     ACTIVIDAD,
     CONFERENCIA;
 
-    fun devolverCategoria(){
-        
+    fun devolverCategoria():Categoria{
+        return Categoria.values().random()
     }
 }

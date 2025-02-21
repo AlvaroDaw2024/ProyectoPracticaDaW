@@ -1,0 +1,5 @@
+class CONSTANTES {
+    companion object{
+
+    }
+}
