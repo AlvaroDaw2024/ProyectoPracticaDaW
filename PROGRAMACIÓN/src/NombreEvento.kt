@@ -48,7 +48,7 @@ enum class NombreEvento(val nombreEvento: String) {
     ECO_GESTION("Encuentro de Eco Gestión"),
     CLIMA_Y_TRANSICION("Simposio Clima y Transición"),
     SOSTENIBILIDAD_PRODUCTIVA("Foro de Sostenibilidad Productiva"),
-    FUTURO_SUSTENTABLE("Cumbre del Futuro Sostenible");
+    FUTURO_SUSTENTABLE("Cumbre del Futuro Sostenible ");
     companion object{
         fun devolverNombreEventoAleatorio():String{
             return values().random().nombreEvento

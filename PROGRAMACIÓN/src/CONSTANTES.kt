@@ -3,7 +3,7 @@ class CONSTANTES {
         val SIMULACION=100
         val ASCII=33..126
         val passwordDigitos=8..16
-        val NUMERO_RANDOM = 1..100
+
 
         //Telefonos
         val TAMANIOTELEFONO=8
@@ -18,8 +18,8 @@ class CONSTANTES {
 
 
         //Probabilidades
+        val PROBABILIDAD = 1..100
         val PROBABILIDAD_ASISTIR = 1..75
-        val PROBABILIDAD_NO_ASISTIR = 76..100
         val PROBABILIDAD_EVENTOONLINE=1..50
         val PROBABILIDAD_EVENTOPRESENCIAL=51..100
     }
