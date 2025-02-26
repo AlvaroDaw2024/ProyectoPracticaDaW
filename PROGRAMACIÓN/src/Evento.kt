@@ -38,5 +38,13 @@ open class Evento {
         this.tipo = tipo
     }
 
+    override fun toString(): String {
+        return "Evento(Categoria=$Categoria, inscritos=$inscritos, asistentes=$asistentes, IdEvento=$IdEvento, nombre='$nombre', fecha=$fecha, ubicacion='$ubicacion', tipo='$tipo')"
+    }
+
+    fun devolverId():Int{
+        return IdEvento
+    }
+
 
 }

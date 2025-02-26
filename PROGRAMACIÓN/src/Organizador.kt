@@ -22,16 +22,16 @@ class Organizador {
     }
 
 
-    private fun crearEventoOnline(): Online {
+    private fun crearEventoOnline(): Online { //Las hago private para que solo pueda utilizarlas los organizadores
         var categoria: ArrayList<Categoria> = ArrayList<Categoria>()
         categoria.add(Categoria.devolverCategoria())
         var inscritos = ArrayList<Usuario>()
         var asistentes = ArrayList<Usuario>()
         var idEvento: Int = Evento.devolverId()
-        var nombre: String = ""
+        var nombre: String = NombreEvento.devolverNombreEventoAleatorio()
         var fecha: LocalDate = Factoria.generarFechaFuturaAleatoria()
-        var ubicacion: String = ""
-        var tipo = "Online"
+        var ubicacion: String = CONSTANTES.ONLINE
+        var tipo = CONSTANTES.ONLINE
         var paginaweb = Webs.webAleatoria()
         return Online(categoria,inscritos,asistentes,idEvento,nombre,fecha,ubicacion,tipo,paginaweb)
     }
@@ -42,11 +42,27 @@ class Organizador {
         var inscritos = ArrayList<Usuario>()
         var asistentes = ArrayList<Usuario>()
         var idEvento: Int = Evento.devolverId()
-        var nombre: String = ""
+        var nombre: String = NombreEvento.devolverNombreEventoAleatorio()
         var fecha: LocalDate = Factoria.generarFechaFuturaAleatoria()
-        var ubicacion: String = ""
-        var tipo = "Presencial"
+        var ubicacion: String = Ubicacion.ubicacionAleatoria()
+        var tipo = CONSTANTES.PRESENCIAL
         var direccion = Ubicacion.ubicacionAleatoria()
         return Presencial(categoria,inscritos,asistentes,idEvento,nombre,fecha,ubicacion,tipo,direccion)
     }
+
+    fun printEventosOrganizados(){
+        println("El organizador $nombre con ID:$ID_Organizador ha creado estos eventos:")
+        for (i in eventosOrganizados.indices){
+            eventosOrganizados[i].toString()
+        }
+    }
+
+    override fun toString(): String {
+        return "Organizador(nombre='$nombre', email='$email', telefono=$telefono, ID_Organizador=$ID_Organizador, eventosOrganizados=$eventosOrganizados)"
+    }
+
+    fun devolverId():Int{
+        return ID_Organizador
+    }
+
 }

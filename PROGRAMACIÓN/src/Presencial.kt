@@ -20,4 +20,10 @@ class Presencial:Evento {
     ) : super(Categoria, inscritos, asistentes, IdEvento, nombre, fecha, ubicacion, tipo) {
         this.direccion = direccion
     }
+
+    override fun toString(): String {
+        return "Presencial(direccion='$direccion') ${super.toString()}"
+    }
+
+
 }

@@ -20,4 +20,10 @@ class Online : Evento {
     ) : super(Categoria, inscritos, asistentes, IdEvento, nombre, fecha, ubicacion, tipo) {
         this.paginaweb = paginaweb
     }
+
+    override fun toString(): String {
+        return "Online(paginaweb='$paginaweb') ${super.toString()}"
+    }
+
+
 }
