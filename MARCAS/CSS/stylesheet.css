@@ -11,6 +11,8 @@
     border-sizing: border-box;
   }
   
+
+
   body {
     width: 100%;
     min-height: 100%;
@@ -21,6 +23,10 @@
     position: relative;
   }
   
+
+  a{
+    text-decoration: none;
+  }
   .fondo {
     min-width: 100%;
     min-height: 100%;
@@ -79,7 +85,7 @@
     height: auto;
   }
   section img {
-    width: 50%;
+    width: 30%;
     border-radius: 50%;
     object-fit: cover;
   }
@@ -389,6 +395,8 @@
   
   
   .presentacion-portal {
+    display: flex;
+    flex-direction: column;
     text-align: center;
     padding: 40px 20px;
     background: rgba(0, 0, 0, 0.5);
