@@ -26,19 +26,19 @@ class Usuario {
     fun printEventosInscritos() {
         println("El usuario $nombre con ID:$ID_Usuario se ha inscrito en estos eventos:")
         for (i in eventosInscritos.indices) {
-            println("$i) ${eventosInscritos[i]}")
+            println("${i+1}) ${eventosInscritos[i]}")
         }
     }
 
     fun printEventosAsistidos() {
         println("El usuario $nombre con ID:$ID_Usuario ha asistido a estos eventos:")
         for (i in eventosAsistidos.indices) {
-            println("$i) ${eventosAsistidos[i]}")
+            println("${i+1}) ${eventosAsistidos[i]}")
         }
     }
 
     override fun toString(): String {
-        return "Usuario(nombre='$nombre', email='$email', password='$password', ID_Usuario=$ID_Usuario, eventosInscritos=$eventosInscritos, eventosAsistidos=$eventosAsistidos)"
+        return "Usuario(nombre='$nombre', email='$email', password='$password', ID_Usuario=$ID_Usuario)"
     }
 
     fun devolverId(): Int {
@@ -49,11 +49,17 @@ class Usuario {
         this.eventosInscritos.removeAt(numero)
     }
 
+    fun inscribirseEvento(evento: Evento){
+        eventosInscritos.add(evento)
+        evento.inscribirUsuario(this)
+    }
+
     fun asistirEvento(){
         for (i in eventosInscritos.indices){
             var random = CONSTANTES.PROBABILIDAD.random()
             if (random in CONSTANTES.PROBABILIDAD_ASISTIR){
                 eventosAsistidos.add(eventosInscritos[i])
+                eventosInscritos[i].asistenciaUsuario(this)
             }
         }
 

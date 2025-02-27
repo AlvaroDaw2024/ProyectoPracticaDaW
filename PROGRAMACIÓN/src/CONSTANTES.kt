@@ -5,9 +5,9 @@ class CONSTANTES {
         val passwordDigitos=8..16
 
         //Cantidades
-        val CANTIDAD_USUARIOS=10..30
-        val CANTIDAD_ORGANIZADORES= 3..6
-        val CANTIDAD_EVENTOS = 1..5
+        val CANTIDAD_USUARIOS=10..20
+        val CANTIDAD_ORGANIZADORES= 4..10
+        val CANTIDAD_EVENTOS = 3..6
 
         //Telefonos
         val TAMANIOTELEFONO=8
@@ -23,6 +23,7 @@ class CONSTANTES {
 
         //Probabilidades
         val PROBABILIDAD = 1..100
+        val PROBABILIDAD_INSCRIBIRSE = 1..20
         val PROBABILIDAD_ASISTIR = 1..75
         val PROBABILIDAD_EVENTOONLINE=1..50
         val PROBABILIDAD_EVENTOPRESENCIAL=51..100

@@ -7,7 +7,8 @@
     <list default="true" id="5a02958c-714f-423d-b67a-815ce8263d53" name="Changes" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CONSTANTES.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/CONSTANTES.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Factoria.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Factoria.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Evento.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Evento.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Interface.kt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Organizador.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Organizador.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Usuario.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Usuario.kt" afterDir="false" />

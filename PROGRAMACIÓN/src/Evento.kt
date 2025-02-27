@@ -39,11 +39,32 @@ open class Evento {
     }
 
     override fun toString(): String {
-        return "Evento(Categoria=$Categoria, inscritos=$inscritos, asistentes=$asistentes, IdEvento=$IdEvento, nombre='$nombre', fecha=$fecha, ubicacion='$ubicacion', tipo='$tipo')"
+        return "Evento(Categoria=$Categoria, IdEvento=$IdEvento, nombre='$nombre', fecha=$fecha, ubicacion='$ubicacion', tipo='$tipo')"
     }
 
     fun devolverId():Int{
         return IdEvento
+    }
+
+    fun inscribirUsuario(usuario: Usuario){
+        inscritos.add(usuario)
+    }
+    fun asistenciaUsuario(usuario: Usuario){
+        asistentes.add(usuario)
+    }
+
+    fun printUsuariosInscritos(){
+        println("El evento $nombre con ID:$IdEvento tiene estos usuarios inscritos: ")
+        for (i in inscritos.indices) {
+            println("${i+1}) ${inscritos[i]}")
+        }
+    }
+
+    fun printUsuariosAsistentes(){
+        println("Al evento $nombre con ID:$IdEvento finalmente asistieron estos usuarios: ")
+        for (i in asistentes.indices) {
+            println("${i+1}) ${asistentes[i]}")
+        }
     }
 
 

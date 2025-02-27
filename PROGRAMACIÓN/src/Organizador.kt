@@ -82,7 +82,7 @@ class Organizador {
     }
 
     override fun toString(): String {
-        return "Organizador(nombre='$nombre', email='$email', telefono=$telefono, ID_Organizador=$ID_Organizador, eventosOrganizados=$eventosOrganizados)"
+        return "Organizador(nombre='$nombre', email='$email', telefono=$telefono, ID_Organizador=$ID_Organizador)"
     }
 
     fun devolverId(): Int {
