@@ -1,74 +1,95 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
-    <link rel="stylesheet" href="../CSS/stylesheet.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Principal</title>
+  <link rel="stylesheet" href="../CSS/stylesheet.css">
 </head>
 <body>
-
-    <div class="fondo">
-        <div class="flexbox">
-
+  <div class="fondo">
+    <div class="flexbox">
+      <header>
+        <section class="logo">
+          <img src="../IMG/logo.png" alt="logo">
+        </section>
+        <section class="categorias">
+          <h1>Categorías</h1>
+          <div class="submenu">
+            <ul>
+              <li><h2>Talleres</h2></li>
+              <li><h2>Conferencias</h2></li>
+              <li><h2>Actividades</h2></li>
+            </ul>
+          </div>
+        </section>
+        <section class="busqueda">
+          <input type="text" placeholder="Escribe aquí..." name="text" class="input">
+        </section>
+        <section class="login">
+          <a href="login.html">
+            <img src="../IMG/login-icon.png" alt="Inicia sesión">
+            <p>Inicia sesión</p>
+          </a>
+        </section>
+      </header>
+      
     
-            <header>
-                <section class="logo">
-                    <img src="../IMG/logo." alt="logo">
-                </section>
-                <section class="categorias">
-                    <h1>Categorias</h1>
-                    <div class="submenu">
-                        <ul>
-                            <li>
-                                <h2>Talleres</h2>
-                            </li>
-                            <li>
-                                <h2>Conferencias</h2>
-                            </li>
-                            <li>
-                                <h2>Actividades</h2>
-                            </li>
-                        </ul>
-                    </div>
-                </section>
-                <section class="busqueda">
-                    <input type="text" placeholder="Escribe aqui..." name="text" class="input">
-                </section>
-                <section class="login">
-                    <div>
-
-                    <a href="login.html">
-                        <svg width="65px" height="65px" viewBox="-3.36 -3.36 22.72 22.72" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#000000" stroke-width="0.00016" transform="rotate(0)"><g id="SVGRepo_bgCarrier" stroke-width="0" transform="translate(0,0), scale(1)"><path transform="translate(-3.36, -3.36), scale(1.42)" fill="#00BC1D" d="M9.166.33a2.25 2.25 0 00-2.332 0l-5.25 3.182A2.25 2.25 0 00.5 5.436v5.128a2.25 2.25 0 001.084 1.924l5.25 3.182a2.25 2.25 0 002.332 0l5.25-3.182a2.25 2.25 0 001.084-1.924V5.436a2.25 2.25 0 00-1.084-1.924L9.166.33z" strokewidth="0"></path></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.128"></g><g id="SVGRepo_iconCarrier"> <path d="M8 7C9.65685 7 11 5.65685 11 4C11 2.34315 9.65685 1 8 1C6.34315 1 5 2.34315 5 4C5 5.65685 6.34315 7 8 7Z" fill="#BEFFCE"></path> <path d="M14 12C14 10.3431 12.6569 9 11 9H5C3.34315 9 2 10.3431 2 12V15H14V12Z" fill="#BEFFCE"></path> </g></svg>
-                    </div>
-                    <div>
-                          <p>Inicia sesión</p>  </a>
-                    </div>
-                </section>
-            </header>
-            <nav>
+      
+      <main>
+      
+        <section class="presentacion-portal">
+          <h1>Bienvenido a Nuestro Portal de Eventos</h1>
+          <p>Aquí encontrarás los eventos más destacados y las actividades más relevantes para ti.</p>
+        </section>
         
-            </nav>
-            <main>
-                <section>
-    
-                </section>
-                <section>
-    
-                </section>
-                <section>
-    
-                </section>
-                <section>
-    
-                </section>
-            </main>
-            <footer>
-    
-            </footer>
-        
-        </div>
+        <section class="carrusel">
+          <div class="slider">
+            
+            <input type="radio" name="radio-btn" id="radio1" checked>
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            
+            
+            <div class="slides">
+              <div class="slide first">
+                <img src="../IMG/evento1.jpg" alt="Evento Destacado 1">
+                <div class="caption">
+                  <h2>Evento Destacado 1</h2>
+                  <p>Descripción breve del evento 1.</p>
+                </div>
+              </div>
+              <div class="slide">
+                <img src="../IMG/evento2.jpg" alt="Evento Destacado 2">
+                <div class="caption">
+                  <h2>Evento Destacado 2</h2>
+                  <p>Descripción breve del evento 2.</p>
+                </div>
+              </div>
+              <div class="slide">
+                <img src="../IMG/evento3.jpg" alt="Evento Destacado 3">
+                <div class="caption">
+                  <h2>Evento Destacado 3</h2>
+                  <p>Descripción breve del evento 3.</p>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Navegación manual del slider -->
+            <div class="navegacion-manual">
+              <label for="radio1" class="manual-btn"></label>
+              <label for="radio2" class="manual-btn"></label>
+              <label for="radio3" class="manual-btn"></label>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <footer>
+        <p>&copy; 2025 Todos los derechos reservados.</p>
+      </footer>
     </div>
-    
+  </div>
 </body>
 </html>
+
