@@ -22,7 +22,7 @@ class Organizador {
     }
 
 
-    private fun crearEventoOnline(): Online { //Las hago private para que solo pueda utilizarlas los organizadores
+    fun crearEventoOnline() {
         var categoria: ArrayList<Categoria> = ArrayList<Categoria>()
         categoria.add(Categoria.devolverCategoria())
         var inscritos = ArrayList<Usuario>()
@@ -33,10 +33,22 @@ class Organizador {
         var ubicacion: String = CONSTANTES.ONLINE
         var tipo = CONSTANTES.ONLINE
         var paginaweb = Webs.webAleatoria()
-        return Online(categoria,inscritos,asistentes,idEvento,nombre,fecha,ubicacion,tipo,paginaweb)
+        eventosOrganizados.add(
+            Online(
+                categoria,
+                inscritos,
+                asistentes,
+                idEvento,
+                nombre,
+                fecha,
+                ubicacion,
+                tipo,
+                paginaweb
+            )
+        )
     }
 
-    private fun crearEventoPresencial(): Presencial {
+    fun crearEventoPresencial() {
         var categoria: ArrayList<Categoria> = ArrayList<Categoria>()
         categoria.add(Categoria.devolverCategoria())
         var inscritos = ArrayList<Usuario>()
@@ -47,13 +59,25 @@ class Organizador {
         var ubicacion: String = Ubicacion.ubicacionAleatoria()
         var tipo = CONSTANTES.PRESENCIAL
         var direccion = Ubicacion.ubicacionAleatoria()
-        return Presencial(categoria,inscritos,asistentes,idEvento,nombre,fecha,ubicacion,tipo,direccion)
+        eventosOrganizados.add(
+            Presencial(
+                categoria,
+                inscritos,
+                asistentes,
+                idEvento,
+                nombre,
+                fecha,
+                ubicacion,
+                tipo,
+                direccion
+            )
+        )
     }
 
-    fun printEventosOrganizados(){
-        println("El organizador $nombre con ID:$ID_Organizador ha creado estos eventos:")
-        for (i in eventosOrganizados.indices){
-            eventosOrganizados[i].toString()
+    fun printEventosOrganizados() {
+        println("El organizador $nombre con ID: $ID_Organizador ha creado estos eventos:")
+        for (i in eventosOrganizados.indices) {
+            println(eventosOrganizados[i])
         }
     }
 
@@ -61,7 +85,7 @@ class Organizador {
         return "Organizador(nombre='$nombre', email='$email', telefono=$telefono, ID_Organizador=$ID_Organizador, eventosOrganizados=$eventosOrganizados)"
     }
 
-    fun devolverId():Int{
+    fun devolverId(): Int {
         return ID_Organizador
     }
 

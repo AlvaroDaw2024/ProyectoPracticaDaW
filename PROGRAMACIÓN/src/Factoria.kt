@@ -1,23 +1,26 @@
 import java.time.LocalDate
 import kotlin.random.*
+import kotlin.system.exitProcess
 
 class Factoria {
     companion object {
-        private var ID_Usuario = 1
-        var ID_Evento = 1
-        private var ID_Organizador = 1
+        var ID_Usuario = 1
 
-        private fun crearUsuario(): Usuario {
+        // var ID_Evento = 1
+        var ID_Organizador = 1
+
+        fun crearUsuario(): Usuario {
+            val eventosAsistidos: ArrayList<Evento> =ArrayList()
+            val eventosInscritos: ArrayList<Evento> =ArrayList()
+            val ID_Usuario: Int = ID_Usuario++
+            val password: String = passwordAleatoria()
+            val email: String = Emails.emailAleatorio()
             val nombre: String = Nombres.nombreAleatorio()
-            val email = Emails.emailAleatorio()
-            val password = passwordAleatoria()
-            val ID_Usuario = ID_Usuario++
-            val eventosAsistidos = ArrayList<Evento>()
 
-            return Usuario(nombre, email, password, ID_Usuario, eventosAsistidos)
+                return Usuario(eventosAsistidos,eventosInscritos,ID_Usuario,password,email,nombre)
         }
 
-        private fun crearOrganizador(): Organizador {
+        fun crearOrganizador(): Organizador {
             val nombre = Empresas.empresaAleatoria()
             val email = Emails.emailAleatorio()
             val telefono = tlfAleatorio()
@@ -27,7 +30,7 @@ class Factoria {
             return Organizador(nombre, email, telefono, ID_Organizador, eventosOrganizados)
         }
 
-        private fun passwordAleatoria(): String {
+        fun passwordAleatoria(): String {
             var password = ""
             repeat(CONSTANTES.passwordDigitos.random()) {
                 password = password + CONSTANTES.ASCII.random().toChar()
@@ -35,11 +38,11 @@ class Factoria {
             return password
         }
 
-        private fun tlfAleatorio(): Int {
+        fun tlfAleatorio(): Int {
             var telefono = ""
-            telefono = telefono + CONSTANTES.NUMEROTLFESPANIOL.random()
+            telefono += CONSTANTES.NUMEROTLFESPANIOL.random().toString()
             repeat(CONSTANTES.TAMANIOTELEFONO) {
-                telefono = telefono + CONSTANTES.NUMEROTELEFONO.random().toChar()
+                telefono += CONSTANTES.NUMEROTELEFONO.random().toString()
             }
             return telefono.toInt()
         }
@@ -52,7 +55,11 @@ class Factoria {
             return LocalDate.ofEpochDay(diasEntre.random())
         }
 
+        fun simulacion() {
 
+
+
+        }
 
 
     }

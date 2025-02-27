@@ -6,6 +6,22 @@ class Usuario {
     var eventosInscritos = ArrayList<Evento>()
     var eventosAsistidos = ArrayList<Evento>()
 
+    constructor(
+        eventosAsistidos: ArrayList<Evento>,
+        eventosInscritos: ArrayList<Evento>,
+        ID_Usuario: Int,
+        password: String,
+        email: String,
+        nombre: String
+    ) {
+        this.eventosAsistidos = eventosAsistidos
+        this.eventosInscritos = eventosInscritos
+        this.ID_Usuario = ID_Usuario
+        this.password = password
+        this.email = email
+        this.nombre = nombre
+    }
+
 
     fun printEventosInscritos() {
         println("El usuario $nombre con ID:$ID_Usuario se ha inscrito en estos eventos:")
